@@ -1,8 +1,5 @@
 # Cache Killer AI
-
-#####################
 Devolover: @ZxyonQiy
-#####################
 
  Automatic Kill Cache and Code Cache from directory. /> Ni<
  Smart automatic Modules AI /> Ni<
