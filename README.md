@@ -16,6 +16,5 @@ Devolover: @ZxyonQiy
 version: Cache Killer AI v1.0 /> Ni<
 all features info.
 
-## Changeloge Next Updates.
-
+## Changeloge Next Update
 
