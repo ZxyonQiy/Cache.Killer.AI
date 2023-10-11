@@ -1,0 +1,53 @@
+#!/bin/sh
+
+# ZxyonQiy (c) telegram
+# Copyright (c) 2023, ZxyonQiy
+
+#set log dir
+log=/data/media/0/Android/CacheKiller-AI.log
+cachedir=/data/data
+MODE=/data/adb/modules/ZxyonQiy/mode.txt
+sleep 1
+echo "ZxyonQiy : Cache Killer AI Modules" > $log
+cache() {
+file=$(find "$cachedir" -name "*cache*" -type f -print); [ -f "$file" ] && { [ ! -w "$file" ] && [ ! -r "$file" ]; } && chmod +rw "$file" && rm -rf "$file" || return 1
+}
+cache_code() {
+file_c=$(find "$cachedir" -name "*code_cache*" -type f -print); [ -f "$file_c" ] && { [ ! -w "$file_c" ] && [ ! -r "$file_c" ]; } && chmod +rw "$file_c" && rm -rf "$file_c" || return 1
+}
+info() {
+date >> $log
+}
+korup() {
+echo "$@" >> $log
+}
+korut() {
+echo "$@" >> $MODE
+}
+killer_sleep() {
+sleep 30
+}
+killer_sleep1() {
+sleep 1
+}
+# start injected run mode//® × ÷ π \\ done©
+killer_sleep1
+korup ""
+echo "unset" > $MODE
+killer_sleep1
+while true; do
+mode_select=$(cat $MODE)
+# set after 30 seconds© %!// sleep_30_set_loop//®
+ killer_sleep1
+if [ ! "$mode_select" = "killer" ]; then
+ killer_sleep
+korut killer
+ korup ┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
+info
+             cache
+             cache_code
+korup Cache Killer AI: Killer Mode
+korup ""
+korup ┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
+fi
+done > /dev/null 2>&1
