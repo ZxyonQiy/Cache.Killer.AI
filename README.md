@@ -1,4 +1,4 @@
-# Cache Killer AI
+# Cache Killer A
 Devolover: @ZxyonQiy
 
  Automatic Kill Cache and Code Cache from directory. <br />
