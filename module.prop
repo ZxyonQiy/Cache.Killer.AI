@@ -1,7 +1,7 @@
 id=cachekiller
 name=Cache Killer AI
-version=v1.0 C
-versionCode=10
+version=v2.0 C
+versionCode=20
 author=@ZxyonQiy
 description=Automatic Kill Cache and Code Cache from directory
 updateJson=https://raw.githubusercontent.com/ZxyonQiy/Cache.Killer.AI/main/update.json
