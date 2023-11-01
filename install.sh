@@ -19,15 +19,12 @@ sleep 3
   unzip -o "$ZIPFILE" 'module.prop' -d "$MODPATH" >&2
   unzip -o "$ZIPFILE" 'service.sh' -d "$MODPATH" >&2
 
-sleep 5
-  ui_print "- Create file Cache Killer "
-  echo "nohup KILLER > /dev/null 2>&1" > "$MODPATH"/service.sh
-
-sleep 10
-  ui_print "- Settings exec file Cache Killer"
+sleep 3
+  ui_print "- Settings file Cache Killer"
+sleep 6
   mkdir -p "$MODPATH"/system/bin
-  unzip -o "$ZIPFILE" 'KILLER' -d "$MODPATH"/system/bin >&2
-  chmod +x "$MODPATH"/system/bin/KILLER
+  unzip -o "$ZIPFILE" 'cachekiller' -d "$MODPATH"/system/bin >&2
+  chmod +x "$MODPATH"/system/bin/cachekiller
   
 sleep 5
   ui_print ""
