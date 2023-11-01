@@ -20,3 +20,10 @@ all features info.
 1. fixed bug cache not clean
 2. fixed bug all features
 
+## Changeloge v2.0 <br />
+1. Change shell program to C Program
+2. Fixed Bug Log spam
+3. Added New Alghoritma for C Program
+4. Smart find Cache and Code Cache
+5. Added New feature Program
+
