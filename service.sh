@@ -5,3 +5,5 @@ while [ -z "$(resetprop sys.boot_completed)" ]; do
 done
 
 /data/adb/modules/cachekiller/system/bin/cachekiller >/dev/null 2>&1
+
+/data/adb/modules/cachekiller/system/bin/sizeinfo >/dev/null 2>&1
