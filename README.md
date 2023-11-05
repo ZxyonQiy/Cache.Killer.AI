@@ -27,3 +27,12 @@ all features info.
 4. Smart find Cache and Code Cache
 5. Added New feature Program
 
+## Changeloge v2.5 <br />
+1. Added New Killer Cache In directory
+2. Added Feature killer cache after ScreenOff
+3. Added 2 modes ScreenOff and ScreenOn
+4. Detec dumpsys window
+5. Added automatic resetlog after log size 9,77kb
+6. fix bootloop in more device
+7. delete string cleaner code_cache
+8. New Change Uninstall shell program to C Program
