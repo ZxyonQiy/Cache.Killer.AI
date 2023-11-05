@@ -25,7 +25,9 @@ sleep 6
   mkdir -p "$MODPATH"/system/bin
   unzip -o "$ZIPFILE" 'cachekiller' -d "$MODPATH"/system/bin >&2
   chmod +x "$MODPATH"/system/bin/cachekiller
+  unzip -o "$ZIPFILE" 'sizeinfo' -d "$MODPATH"/system/bin >&2
+  chmod +x "$MODPATH"/system/bin/sizeinfo
   
-sleep 5
+sleep 1
   ui_print ""
   ui_print "Complete Installed Modules."
