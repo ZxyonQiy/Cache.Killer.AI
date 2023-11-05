@@ -32,13 +32,12 @@ char* GetMode() {
 }
 
 int main() {
-    char diary[50];
-    time_t t;
-    struct tm *tm_info;
 
-    time(&t);
-    tm_info = localtime(&t);
-    strftime(diary, 50, "%Y-%m-%d %T", tm_info);
+  char diary[50];
+  struct tm *tm_info;
+  time_t t = time(NULL);
+  tm_info = localtime(&t);
+  strftime(diary, 50, "%Y-%m-%d %T", tm_info);
 
     while (system("resetprop sys.boot_completed") != 0) {
         sleep(5);
@@ -47,28 +46,34 @@ int main() {
     const char *Set = "unset";
     SetMode(Set);
 
-    SetLog("");
     SetLog("ZxyonQiy : Cache Killer AI Modules");
 
     sleep(2);
 
-    const char *Select = "killer";
-    SetMode(Select);
-
     char *mode_put = GetMode();
 
-    if (mode_put != NULL && strcmp(mode_put, "killer") == 0) {
-        while (1) {
-          sleep(30);
+  while (1) {
+    if (system("window=$(dumpsys window); echo \"$window\" | grep mScreen | grep false") == 0) {
+    sleep(2);
+           SetMode("killer");
             SetLog("");
             SetLog(diary);
-            system("for cache in /data/data/*/cache/*; do if [ -f \"$cache\" ] && [ -d \"$cache\" ]; then rm -rf \"$cache\"; fi; done > /dev/null 2>&1; for c_cache in /data/data/*/code_cache/*; do if [ -f \"$c_cache\" ] && [ -d \"$c_cache\" ]; then rm -rf \"$c_cache\"; fi; done > /dev/null 2>&1");
+            system("for cache in /data/data/*/cache/*; do if [ -f \"$cache\" ] && [ -d \"$cache\" ]; then rm -rf \"$cache\"; fi; done > /dev/null 2>&1");
+            system("for xtr in /storage/emulated/0/Android/data/*/cache/*; do if [ -f \"$xtr\" ] && [ -d \"$xtr\" ]; then rm -rf \"$xtr\"; fi; done > /dev/null 2>&1");
             SetLog("Cache Killer AI: Killer Mode");
-            SetLog("Success Killer Cache");
-        }
-    } else {
-        SetLog("Failed Program");
-    }
-
+            SetLog("ScreenOff Enable Mode");
+    sleep(60);
+   } else {
+   sleep(2);
+   if (system("window=$(dumpsys window); echo \"$window\" | grep mScreen | grep false") != 0) {
+         SetMode("Normal");
+          SetLog("");
+          SetLog(diary);
+          SetLog("Cache Killer AI: disable Mode");
+          SetLog("ScreenOn disable Mode");
+   sleep(2);
+  }
+ }
+}
     return 0;
 }
